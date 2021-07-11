@@ -1,0 +1,23 @@
+import java.util.*;
+class RevString
+{
+ public static void main(String args[])
+ {
+  Scanner scn=new Scanner(System.in);
+  String str=scn.nextLine();
+  char ch[]= str.toCharArray();
+  String rev="";
+  if(ch.length>=1 || ch.length<=100000)
+  {
+  for(int i=ch.length-1;i>=0;i--)
+  {
+   rev+=i;
+   System.out.print(ch[i]);
+  }
+  }
+ }
+}
+
+OUTPUT:
+Aditya
+aytidA
