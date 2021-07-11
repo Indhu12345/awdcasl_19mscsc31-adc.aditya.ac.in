@@ -1,0 +1,29 @@
+import java.util.Scanner;
+class upperLower
+{
+ public static void main(String args[])
+ {
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter any String");
+String str=sc.nextLine();
+char ch;
+for(int i=0;i<str.length();i++)
+{
+ch=str.charAt(i);
+if(Character.isUpperCase(ch))
+System.out.print(Character.toLowerCase(ch));
+else
+System.out.print(Character.toUpperCase(ch));
+sc.close();
+}
+}
+}
+
+OUTPUT:
+Enter any String
+ADITYA
+aditya
+
+Enter any String
+aditya
+ADITYA
