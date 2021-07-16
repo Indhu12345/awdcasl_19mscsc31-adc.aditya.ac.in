@@ -1,0 +1,30 @@
+import java.util.*;
+class program2
+{
+ public static void main(String args[])
+ {
+  Scanner scn=new Scanner(System.in);
+  System.out.println("Enter size of array list");
+  int n=scn.nextInt();
+  ArrayList<Integer> a=new ArrayList<Integer>();
+  System.out.println("Enter elements of array list");
+  for(int i=0;i<n;i++)
+    a.add(scn.nextInt());
+  System.out.println("Enter element to search");
+  int k=scn.nextInt();
+  int i=a.indexOf(k);
+  if(i!=-1)
+   System.out.println("Element is found");
+  else
+    System.out.println("Element is not found");
+ }
+}
+...................................
+OUTPUT:
+      Enter size of array list
+      5
+      Enter elements of array list
+      10 20 30 40 50
+      Enter element to search
+      30                        
+      Element is found          
