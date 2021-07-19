@@ -1,29 +1,79 @@
 import java.util.*;
-class CHECK4
+public class Main1
 {
-static void printFreq(int arr[])
-{
-HashMap<Integer, Integer> hmap =  new HashMap<Integer, Integer>();
-for (int i = 0; i < arr.length; i++)
-{
-Integer c = hmap.get(arr[i]);
-if (hmap.get(arr[i]) == null)
-hmap.put(arr[i], 1);
-else 
-hmap.put(arr[i], ++c);
-}   
-for (Map.Entry m:hmap.entrySet())
-System.out.println("Frequency of " + m.getKey() +  " is " + m.getValue());                            
-}
-public static void main (String[] args)
-{
-int arr[] = {10, 34, 5, 10, 3, 5, 10};
-printFreq(arr);
-}
+  public static void main (String[]args)
+  {
+    HashMap < Integer, Integer > h = new HashMap < Integer, Integer > ();
+    Scanner sc = new Scanner (System.in);
+      System.out.
+      println (" a.adds an entry with key x and value y to hashmap");
+      System.out.
+      println
+      (" b.prints value of x if it is present in hashmap else it prints -1");
+      System.out.println (" c.prints the size of the hash Map");
+      System.out.println (" d.removes an entry with key x from hashmap");
+      System.out.println (" e.to exit");
+      System.out.println ("enter your choice");
+    char ch = sc.next ().charAt (0);
+
+    while (ch != 'e')
+      {
+
+	switch (ch)
+	  {
+	  case 'a':
+	    System.out.println ("Enter key and value");
+	    h.put (sc.nextInt (), sc.nextInt ());
+	    break;
+	    case 'b':System.out.
+	      println
+	      ("enter the key value of element that you want to search");
+	    int k = sc.nextInt ();
+	    if (h.containsKey (k))
+	        System.out.println (h.get (k));
+	    else
+	        System.out.println ("-1");
+	      break;
+	    case 'c':System.out.println (h.size ());
+	      break;
+	    case 'd':System.out.
+	      println
+	      ("enter the key of the element that you want to remove");
+	      h.remove (sc.nextInt ());
+	      break;
+
+	  }
+	System.out.println ("enter your choice");
+	ch = sc.next ().charAt (0);
+      }
+  }
 }
 
 OUTPUT:
-Frequency of 34 is 1
-Frequency of 3 is 1
-Frequency of 5 is 2
-Frequency of 10 is 3
+a.adds an entry with key x and value y to hashmap
+ b.prints value of x if it is present in hashmap else it prints -1
+ c.prints the size of the hash Map
+ d.removes an entry with key x from hashmap
+ e.to exit
+enter your choice
+a  
+Enter key and value
+1 2
+enter your choice
+a
+Enter key and value
+66 3
+enter your choice
+b
+enter the key value of element that you want to search
+66
+3
+enter your choice
+d
+enter the key of the element that you want to remove
+1
+enter your choice
+c
+1
+enter your choice
+e
