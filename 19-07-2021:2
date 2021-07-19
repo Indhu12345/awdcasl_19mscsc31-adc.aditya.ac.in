@@ -1,0 +1,25 @@
+class Solution{
+    static int map(int n, String keys[], int arr[], String s)
+    {
+        HashMap<String,Integer> x = new HashMap<String,Integer>(); 
+        for(int i=0;i<n;i++) 
+        x.put(keys[i],arr[i]);
+ 
+        if(x.containsKey(s)) 
+         { 
+            int y =x.get(s); 
+            return y; 
+         } 
+         else
+             return -1; 
+    }
+}
+
+OUTPUT:
+For Input:
+4
+csdb 4 dsh 5 askj 8 adfs 9
+dptu
+
+Your Output is: 
+-1
